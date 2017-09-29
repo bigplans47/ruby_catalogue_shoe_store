@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  database: catalogue
+  database: catalogue_db
 test:
   adapter: postgresql
-  database: catalogue_test
+  database: catalogue_test_db
