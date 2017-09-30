@@ -11,3 +11,8 @@ The current title is: <%= @store.name %>
     <button type="submit" class="btn btn-success">Update Shoes available in this store</button>
   </div>
 </form>
+
+<p>Shoes sold in this store:</p>
+<p><% @store.shoes.each() do |single| %></p>
+<li><%= single.brand %> <%= single.id %></li>
+<p><% end %></p>

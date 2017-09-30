@@ -61,7 +61,12 @@ get '/store/:id/edit/shoes' do
 end
 
 post '/store/:id/edit/shoes' do
-  @store = Store.find(params['id'])
+  id_shoe = params.fetch("shoes_in_store")
   @shoes = Shoe.all()
+  @shoe = Shoe.find(id_shoe)
+  # binding.pry
+  @store = Store.find(params['id'])
+  @store.shoes.push(@shoe)
+  # @shoes = Shoe.all()
   erb(:edit_shoes_in_store)
 end

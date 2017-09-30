@@ -1,8 +1,8 @@
 <h1> Name of Store is: <%= @store.name %></h1>
-<p>Click below to shoes sold at the store</p>
+<p>Click below to See or Edit Shoes sold in Store</p>
 <form action="/store/<%= @store.id %>/edit/shoes" method="get">
     <input name="the_store_id" type="hidden" value="<%=  @store.id %>">
-    <button type="submit" class="btn btn-info">Click Here to Edit Shoes sold in Store</button>
+    <button type="submit" class="btn btn-info">Click Here to See or Edit Shoes sold in Store</button>
 </form>
 <br>
 <p>Click below to edit the store name</p>
