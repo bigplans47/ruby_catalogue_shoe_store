@@ -54,13 +54,14 @@ post('/store/:id/edit') do
   erb(:edit_store)
 end
 
+get '/store/:id/edit/shoes' do
+  @store = Store.find(params['id'])
+  @shoes = Shoe.all()
+  erb(:edit_shoes_in_store)
+end
 
-
-
-# post('/project/:id/edit_title') do
-#   # project_title = params.fetch("title")
-#   @id = params.fetch("id").to_i
-#   @the_project = Project.find(@id)
-#   @the_project.update({:title => project_title})
-#   erb(:project_edit)
-# end
+post '/store/:id/edit/shoes' do
+  @store = Store.find(params['id'])
+  @shoes = Shoe.all()
+  erb(:edit_shoes_in_store)
+end

@@ -1,0 +1,13 @@
+The current title is: <%= @store.name %>
+<br>
+<form action="/store/<%= @store.id %>/edit/shoes" method="post">
+  <div class="form-group">
+    <label for="shoes_in_store">Name of Shoe to add</label>
+    <select name="shoes_in_store" id="shoes_in_store" type="text">
+      <% @shoes.each() do |single| %>
+      <option value="<%= single.id %>"><%= single.brand %></option>
+      <% end %>
+    </select>
+    <button type="submit" class="btn btn-success">Update Shoes available in this store</button>
+  </div>
+</form>
