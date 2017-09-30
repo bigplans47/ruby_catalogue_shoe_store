@@ -27,3 +27,27 @@ post('/store/:id/delete') do
   @store.delete
   redirect('/')
 end
+
+get '/store/:id/edit' do
+  "Hello World2"
+  @store = Store.find(params['id'])
+  erb(:edit_store)
+end
+
+post('/store/:id/edit') do
+  new_store_name = params.fetch("new_store_name")
+  @store = Store.find(params['id'])
+  @store.update({:name => new_store_name})
+  erb(:edit_store)
+end
+
+
+
+
+# post('/project/:id/edit_title') do
+#   # project_title = params.fetch("title")
+#   @id = params.fetch("id").to_i
+#   @the_project = Project.find(@id)
+#   @the_project.update({:title => project_title})
+#   erb(:project_edit)
+# end

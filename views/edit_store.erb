@@ -1,0 +1,9 @@
+Rename store by typing a new title for it below, the current title is: <%= @store.name %>
+<br>
+<form action="/store/<%= @store.id %>/edit" method="post">
+  <div class="form-group">
+    <label for="new_store_name" class="form-label">Name of Store</label>
+    <input type="text" name="new_store_name" class="form-control" id="new_store_name" placeholder="name">
+    <button type="submit" class="btn btn-warning">Update Name</button>
+  </div>
+</form>
