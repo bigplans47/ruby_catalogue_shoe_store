@@ -1,1 +1,6 @@
-<%= @store %>
+<h1><%= @store.name %></h1>
+
+<form action="/store/<%= @store.id %>/delete" method="post">
+    <input name="the_store_id" type="hidden" value="<%=  @store.id %>">
+    <button type="submit" class="btn btn-primary">Delete Store</button>
+</form>

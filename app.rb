@@ -6,7 +6,6 @@ Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 
 get('/') do
   @stores = Store.all()
-  # binding.pry
   erb(:index)
 end
 
@@ -19,6 +18,12 @@ post('/') do
 end
 
 get('/store/:id') do
-  @store = Store.find(params[:id])
+  @store = Store.find(params['id'])
   erb(:store)
+end
+
+post('/store/:id/delete') do
+  @store = Store.find(params['id'])
+  @store.delete
+  redirect('/')
 end
