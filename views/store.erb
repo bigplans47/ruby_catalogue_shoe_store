@@ -8,6 +8,5 @@
 <p>Click below to delete the store</p>
 <form action="/store/<%= @store.id %>/delete" method="post">
     <input name="the_store_id" type="hidden" value="<%=  @store.id %>">
-    <button type="submit" class="btn btn-primary">Delete Store</button>
+    <button type="submit" class="btn btn-danger">Delete Store</button>
 </form>
-<br>
