@@ -1,0 +1,18 @@
+<h1>Add to <u>Shoes</u> List</h1>
+<div class="well">
+  <form action="/shoe" method="post">
+    <div class="form-group">
+      <label for="shoe_brand" class="form-label">Brand of Shoe to Add</label>
+      <input type="text" name="shoe_brand" class="form-control">
+      <label for="shoe_price" class="form-label">Price of Shoe to Add</label>
+      <input type="text" name="shoe_price" class="form-control">
+      <button type="submit" class="btn btn-info">Create Shoe</button>
+    </div>
+  </form>
+</div>
+<% if @shoes.any?() %>
+  <h1>Shoes List</h1>
+  <% @shoes.each() do |single|  %>
+    <li><a href="/shoe/<%= single.id %>"><%= single.brand %> <%= single.price %></a></li>
+  <% end %>
+<% end %>

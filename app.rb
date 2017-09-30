@@ -6,15 +6,28 @@ Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 
 get('/') do
   @stores = Store.all()
+  @shoes = Shoe.all()
   erb(:index)
 end
 
 post('/') do
-  @stores = Store.all()
   store_name = params.fetch("store_name")
   Store.create({:name => store_name})
-  # @stores = Store.all()
+  @stores = Store.all()
   redirect '/'
+end
+
+get('/shoe') do
+  @shoes = Shoe.all()
+  erb(:shoe)
+end
+
+post('/shoe') do
+  shoe_brand = params.fetch("shoe_brand")
+  shoe_price = params.fetch("shoe_price")
+  Shoe.create({:brand => shoe_brand, :price => shoe_price})
+  @shoes = Shoe.all()
+  erb(:shoe)
 end
 
 get('/store/:id') do

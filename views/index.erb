@@ -1,18 +1,24 @@
+<h1>Add to Shoes List</h1>
+<form action="/shoe" method="get">
+  <div class="form-group">
+    <button type="submit" class="btn btn-info">Create Shoes Here</button>
+  </div>
+</form>
+
 <h1>Add to Stores List</h1>
 <div class="well">
   <form action="/" method="post">
     <div class="form-group">
       <label for="store_name" class="form-label">Name of Store to Add</label>
       <input type="text" name="store_name" class="form-control">
-      <button type="submit">Create Store</button>
+      <button type="submit" class="btn btn-primary">Create Store</button>
     </div>
   </form>
 </div>
-
 <% if @stores.any?() %>
   <h1>Stores List</h1>
   <% @stores.each() do |single|  %>
     <li><a href="/store/<%= single.id %>"><%= single.name %></a></li>
   <% end %>
-
 <% end %>
+<br>
