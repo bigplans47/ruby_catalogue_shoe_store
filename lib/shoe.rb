@@ -2,9 +2,9 @@ class Shoe < ActiveRecord::Base
   has_many :catalogues
   has_many :stores, through: :catalogues
   validates(:brand, :presence => true)
+  validates(:brand, {:presence => true, :length => {:maximum => 100}})
   before_save :cap_first_letter_shoe
   before_save :set_price_standard
-
 
   private
 

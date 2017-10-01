@@ -37,3 +37,17 @@ describe (Shoe) do
     expect(shoe.save()).to(eq(false))
   end
 end
+
+describe(Store) do
+  it("ensures the length of store name is at most 100 characters") do
+    store = Store.new({:name => "a".*(101)})
+    expect(store.save()).to(eq(false))
+  end
+end
+
+describe(Shoe) do
+  it("ensures the length of shoe brand is at most 100 characters") do
+    shoe = Shoe.new({:brand => "a".*(101)})
+    expect(shoe.save()).to(eq(false))
+  end
+end
