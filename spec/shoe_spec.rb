@@ -51,3 +51,13 @@ describe(Shoe) do
     expect(shoe.save()).to(eq(false))
   end
 end
+
+describe(Store) do
+  it("ensures the store name is unique") do
+    store = Store.new({:name => "a".*(5)})
+    store2 = Store.new({:name => "a"*(5)})
+    store.save
+    store2.save
+    expect(store2.save()).to(eq(false))
+  end
+end
