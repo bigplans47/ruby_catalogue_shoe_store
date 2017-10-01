@@ -13,6 +13,6 @@
 <% if @shoes.any?() %>
   <h1>Shoes List</h1>
   <% @shoes.each() do |single|  %>
-    <li><a href="/shoe/<%= single.id %>"><%= single.brand %> <%= single.price %></a></li>
+    <li><a href="/shoe/<%= single.id %>"><%= single.brand %> $<%= single.price %>.00</a></li>
   <% end %>
 <% end %>

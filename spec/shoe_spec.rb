@@ -14,3 +14,13 @@ describe (Shoe) do
     expect(shoe.brand()).to(eq('Adidas Super'))
   end
 end
+
+describe (Shoe) do
+  it('makes the price standard $0.00 format') do
+    shoe = Shoe.create(:brand => 'adidas super', :price => 30)
+    money1 = Money.new(1000, "USD")
+    # binding.pry
+    # expect(30).to(eq(30.00))
+    expect(shoe.price()).to(eq('$30.00'))
+  end
+end

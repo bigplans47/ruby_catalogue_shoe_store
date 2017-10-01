@@ -14,5 +14,5 @@ The current title is: <%= @store.name %>
 
 <p>Shoes sold in this store:</p>
 <p><% @store.shoes.each() do |single| %></p>
-<li><%= single.brand %> <%= single.id %></li>
+<li><%= single.brand %> $<%= single.price %>.00</li>
 <p><% end %></p>
