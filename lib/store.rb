@@ -4,6 +4,7 @@ class Store < ActiveRecord::Base
   validates(:name, :presence => true)
   validates(:name, {:presence => true, :length => {:maximum => 100}})
   # validates(:name, uniqueness: true)
+  # validates(:name, uniqueness: {case_sensitive: false})
   before_save(:cap_first_letter)
 
   private
