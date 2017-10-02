@@ -15,15 +15,6 @@ describe (Shoe) do
   end
 end
 
-describe (Shoe) do
-  it('makes the price standard $0.00 format') do
-    shoe = Shoe.create(:brand => 'adidas super', :price => 30)
-    # binding.pry
-    # expect(30).to(eq($30.00))
-    expect(shoe.price()).to(eq('$30.00'))
-  end
-end
-
 describe(Store) do
   it("validates presence of store name") do
     store = Store.new(:name => '')
