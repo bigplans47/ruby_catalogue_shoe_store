@@ -8,7 +8,7 @@ describe (Store) do
 end
 
 describe (Shoe) do
-  it('makes the first letter a capital of the sshoe') do
+  it('makes the first letter a capital of the shoe') do
     shoe = Shoe.create(:brand => 'adidas super', :price => 30)
     # binding.pry
     expect(shoe.brand()).to(eq('Adidas Super'))
@@ -45,8 +45,16 @@ end
 
 describe(Store) do
   it("ensures the store name is unique") do
-    store = Store.new({:name => "super duber"})
-    store2 = Store.new({:name => "super duber"})
+    store = Store.create({:name => "super duber"})
+    store2 = Store.create({:name => "super duber"})
     expect(store2.save()).to(eq(false))
+  end
+end
+
+describe(Shoe) do
+  it("ensures the shoe brand is unique") do
+    shoe = Shoe.create({:brand => 'adidas super', :price => 30})
+    shoe2 = Shoe.create({:brand => 'adidas super', :price => 30})
+    expect(shoe2.save()).to(eq(false))
   end
 end

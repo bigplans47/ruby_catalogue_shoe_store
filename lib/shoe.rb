@@ -4,7 +4,7 @@ class Shoe < ActiveRecord::Base
   validates(:brand, :presence => true)
   validates(:brand, {:presence => true, :length => {:maximum => 100}})
   before_save :cap_first_letter_shoe
-  before_save :set_price_standard
+  validates(:brand, uniqueness: true)
 
   private
 
