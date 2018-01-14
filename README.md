@@ -1,6 +1,14 @@
-A project that uses ActiveRecord to make a Web Application for adding stores and a Shoe Inventory in General and to specific Stores.
+A project that uses ActiveRecord to make a Web Application for adding stores and a Shoe Inventory in General and to specific Stores and also tests code with RSpec.
 
-An application where employees can view, add, update and delete stores with shoes that they set up then assign to stores. Date of README: 10/1/2017
+An application where employees can view, add, update and delete stores with shoes that they set up then assign to stores. Date of README: 10/1/2017 Updated README: 1/13/2017
+
+![Ticketing](/img/rspec.png?raw=true "rspec")
+------------------------------------------
+![Ticketing](/img/home-page.png?raw=true "home-page")
+-----------------------------------------
+![Ticketing](/img/add-shoe.png?raw=true "add-shoe")
+-----------------------------------------
+[Ticketing](/img/store-specific-page.png?raw=true "store-specific-page")
 
 Description
 
@@ -16,7 +24,6 @@ ruby app.rb will start a localhost server
 Visit localhost:4567
 For a Live Version
 
-Visit https://tbd
 
 Specifications
 
@@ -40,7 +47,7 @@ Issues with non-integer numbers entered as a price with how user views that.
 
 Technologies Used
 
-Bootstrap,HTML,Ruby(ActiveRecord),Sinatra
+Bootstrap,HTML,Ruby(ActiveRecord),Sinatra,Postgres
 
 Support and contact details
 
