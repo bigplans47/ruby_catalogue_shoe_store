@@ -4,7 +4,7 @@ An application where employees can view, add, update and delete stores with shoe
 
 ![Ticketing](/img/rspec.png?raw=true "rspec")
 ------------------------------------------
-![Ticketing](/img/home-page.png?raw=true "home-page")
+<!-- ![Ticketing](/img/home-page.png?raw=true "home-page") -->
 -----------------------------------------
 [Ticketing](/img/store-specific-page.png?raw=true "store-specific-page")
 
