@@ -1,6 +1,6 @@
 A project that uses ActiveRecord to make a Web Application for adding stores and a Shoe Inventory in General and to specific Stores and also tests code with RSpec.
 
-An application where employees can view, add, update and delete stores with shoes that they set up then assign to stores. Date of README: 10/1/2017 Updated README: 1/13/2017
+An application where employees can view, add, update and delete stores with shoes that they set up then assign to stores. Date of README: 10/1/2017 Updated README: 4/13/2017
 
 ![Ticketing](/img/rspec.png?raw=true "rspec")
 ------------------------------------------
@@ -15,13 +15,24 @@ There are the following features in the Project: Stores and Shoes are created wi
 To Test Locally
 
 git clone https://github.com/bigplans47/ruby_catalogue_shoe_store.git to your desktop
-cd volunteer_tracker
-bundle to install all required gems
-rspec and the tests will be ran
-ruby app.rb will start a localhost server
-Visit localhost:4567
-For a Live Version
 
+cd ruby_catalogue_shoe_store
+
+$bundle to install all required gems
+
+$rake db:create
+
+$rake db:migrate
+
+$rake db:test:prepare
+
+$rspec -and the tests will be ran
+
+$ruby app.rb -will start a localhost server
+
+Visit url localhost:4567 for a Live Version
+
+Add a shoe and store to see the app in action!
 
 Specifications
 
